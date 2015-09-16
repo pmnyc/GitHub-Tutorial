@@ -1,7 +1,7 @@
 #!/usr/bin/env 
 
 """
-Author: pm
+Author: Man Peng
 Date: Sep 2015
 """
 
@@ -51,6 +51,7 @@ git remote -v
 git branch man-branch
 git branch # check the list of local branches
 git branch -a # check the list of all branches, including remote ones
+git branch -d useless-branch # delete the local branch you do not want
 # switch to my own branch
 git checkout man-branch
 # merge the branch named "man-branch" into the current branch, say, "master"
@@ -65,8 +66,8 @@ If you are a collaborator who wants to make contribuiton to the
     main branch through GitHub, you may
     1) fork the original branch into your own branch in your GitHub account
     2) after you make changes to your forked branch, you may send a pull 
-        request for your branch (the base) to be merged into original
-        main branch (the HEAD)
+        request for your modified forked branch (the head fork/branch) to be 
+        merged into the branch in the original repo (the base fork, base branch)
 """
 
 ################################################################
@@ -80,6 +81,8 @@ SSH keys are a way to identify trusted computers, without involving passwords. I
     account. Without SSH keys, you may have to type your account name and password every time you
     push something, and it gets quite annoying and even makes things impossible if we want to automate
     things in command lines/codes.
+
+The following is specific to Linux OS.
 """
 
 ssh-keygen -t rsa -b 4096 -C 'myemail@email.com'

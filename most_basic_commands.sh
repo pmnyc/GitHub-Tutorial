@@ -1,7 +1,7 @@
 #!/usr/bin/env 
 
 """
-Author: Man Peng
+Author: pm
 Date: Sep 2015
 """
 

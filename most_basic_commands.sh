@@ -22,6 +22,9 @@ git add --all #adding all files
 git commit -m 'my change to some codes'
 # check the current status, such as uncommitted changes, failures, etc.
 git status
+# add tag for version control and releases
+git tag -a v1.4 -m 'my version 1.4' #add tag v1.4 with comments
+git tag -d release01 #remove tag release01
 
 # Revert changes after the files are even staged (after git add steps)
     # so that you may keep the files what they were before any of your
@@ -58,6 +61,15 @@ git checkout man-branch
 git merge man-branch
 # after you changed your program codes and made commits
 git push -u origin man-branch # push your changes to github
+
+# push the existing git softwares to the GitHub account
+git remote add origin https://github.com/National-Grid/OpenStudio-server.git
+git push -u origin --tag # this is to push tags or releases or versions into origin
+git push -u origin --mirror # this is to push everything including tags into origin
+# to recover the file myfile.py from previous commit/version
+git log ./myfile.py  ##use . at the end to indicate whole folder
+git checkout e7bc68e55075c6a92adc2cd2bafadcabfe96033f ./myfile.py  ##where, that long commit code is
+        ## from the log we got for the commit/version that we want to revert back to
 
 """
 Another way to push results is through github desktop software

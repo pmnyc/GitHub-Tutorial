@@ -65,7 +65,8 @@ git push -u origin man-branch # push your changes to github
 # push the existing git softwares to the GitHub account
 git remote add origin https://github.com/National-Grid/OpenStudio-server.git
 git push -u origin --tag # this is to push tags or releases or versions into origin
-git push -u origin --mirror # this is to push everything including tags into origin
+git push -u origin --all # this is to push everything including tags into origin
+git push -u origin --mirror # this is to push everything including tags into origin, and it overrides everything on the GitHub repo
 # to recover the file myfile.py from previous commit/version
 git log ./myfile.py  ##use . at the end to indicate whole folder
 git checkout e7bc68e55075c6a92adc2cd2bafadcabfe96033f ./myfile.py  ##where, that long commit code is

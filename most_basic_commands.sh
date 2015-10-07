@@ -25,6 +25,7 @@ git status
 # add tag for version control and releases
 git tag -a v1.4 -m 'my version 1.4' #add tag v1.4 with comments
 git tag -d release01 #remove tag release01
+git push -u origin :refs/tags/release01 #remove tag release01 from remote "origin"
 
 # Revert changes after the files are even staged (after git add steps)
     # so that you may keep the files what they were before any of your

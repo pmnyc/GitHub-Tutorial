@@ -85,7 +85,21 @@ If you are a collaborator who wants to make contribuiton to the
 """
 
 ################################################################
-### Input from Yoon about the public key assess on EC2 Instance
+#How to sync the forked branch with the original one(or so-called upstream repo)
+################################################################
+# Add the remote, call it "upstream":
+git remote add upstream https://github.com/whoever/whatever.git
+# Fetch all the branches of that remote into remote-tracking branches,
+git fetch upstream
+# Make sure that you're on your master branch:
+git checkout master
+# Rewrite your master branch so that any commits of yours that
+# aren't already in upstream/master are replayed on top of that
+# other branch:
+git rebase upstream/master
+
+################################################################
+### About the public key assess on EC2 Instance
 ### You’ll need this when you get github access denied due to 
 ### missing public key
 ################################################################

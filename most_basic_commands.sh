@@ -43,6 +43,13 @@ for branch in `git branch -a | grep remotes | grep -v HEAD`; do
 done
 git fetch --all ; git pull --all
 
+# If you have to force to sync your local with remote server
+git fetch --all
+git reset --hard origin/your_branch
+
+# If you have to force the remote repo to sync with your local repo
+git push -f origin --all
+
 ################################################################
 ### Always "git fetch origin the_main_branch" to 
 ### get the most updated codes if one wants to make

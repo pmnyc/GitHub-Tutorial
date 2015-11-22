@@ -105,6 +105,11 @@ git checkout master
 # other branch:
 git rebase upstream/master
 
+# Change the default text editor for opening text when making changes to
+    # some of git files in an interactive mode
+git config --global core.editor "subl -n -w" #change to sublimetext
+git config --global core.editor "nano -w" #change to nano
+
 ################################################################
 ### About the public key assess on EC2 Instance
 ### You’ll need this when you get github access denied due to 

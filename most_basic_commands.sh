@@ -51,6 +51,15 @@ git reset --hard origin/your_branch
 git push -f origin --all
 
 ################################################################
+### Sync up remote repository when I already made changes to some files
+################################################################
+git stash
+git pull
+git stash pop # now the changed files by me will be in the list for being added and committed
+git add *
+git commit -m "my changes after last sync"
+
+################################################################
 ### Always "git fetch origin the_main_branch" to 
 ### get the most updated codes if one wants to make
 ### changes to the source codes
